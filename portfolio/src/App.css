@@ -1,0 +1,61 @@
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.navbar {
+  position: fixed;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-container {
+  min-height: 100vh;
+  padding: 40px 40px 0px 40px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.page-container {
+  animation: fadeIn 0.5s ease-in-out;
+  padding: 2.5rem;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.page-content {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

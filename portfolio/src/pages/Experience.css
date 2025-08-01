@@ -1,0 +1,346 @@
+.timeline {
+  position: relative;
+  padding: 3rem 2rem;
+  background: transparent;
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 3.5rem;
+  transition: transform 0.15s ease;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.timeline-item:hover {
+  transform: translateY(-2px);
+}
+
+.timeline-marker {
+  position: relative;
+  margin-right: 2.5rem;
+  z-index: 2;
+  flex-shrink: 0;
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(139, 92, 246, 0.7);
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.15);
+  transition: all 0.2s ease;
+  position: relative;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.05);
+}
+
+.timeline-item:hover .timeline-dot {
+  border-color: rgba(139, 92, 246, 1);
+  background: rgba(139, 92, 246, 0.25);
+  transform: scale(1.15);
+  box-shadow: 0 0 0 6px rgba(139, 92, 246, 0.08);
+}
+
+.timeline-line {
+  position: absolute;
+  left: 7px;
+  top: 2.5rem;
+  width: 2px;
+  height: calc(100% + 1rem);
+  background: linear-gradient(
+    to bottom,
+    rgba(139, 92, 246, 0.4),
+    rgba(139, 92, 246, 0.15),
+    rgba(139, 92, 246, 0.05)
+  );
+  z-index: 1;
+}
+
+.timeline-main {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.timeline-content {
+  flex: 2;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 2.5rem 3rem;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.08),
+    0 1px 4px rgba(139, 92, 246, 0.05);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(139, 92, 246, 0.12);
+  color: #e2e8f0;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  min-height: 200px;
+}
+
+.timeline-content:hover {
+  box-shadow: 
+    0 8px 25px rgba(139, 92, 246, 0.12),
+    0 3px 10px rgba(0, 0, 0, 0.1);
+  border-color: rgba(139, 92, 246, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.timeline-sidebar {
+  flex: 1;
+  min-width: 250px;
+  max-width: 320px;
+  position: sticky;
+  top: 2rem;
+}
+
+.tech-stack {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(139, 92, 246, 0.08);
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.tech-stack:hover {
+  border-color: rgba(139, 92, 246, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.tech-stack h5 {
+  margin: 0 0 1rem 0;
+  color: rgba(139, 92, 246, 0.9);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  background: rgba(139, 92, 246, 0.1);
+  color: rgba(139, 92, 246, 0.9);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.3);
+  transform: translateY(-1px);
+}
+
+.experience-header {
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.expand-indicator {
+  opacity: 0.4;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(139, 92, 246, 0.05);
+}
+
+.experience-header:hover .expand-indicator {
+  opacity: 0.8;
+  background: rgba(139, 92, 246, 0.1);
+  transform: scale(1.05);
+}
+
+.expand-arrow {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5;
+  stroke: rgba(139, 92, 246, 0.8);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expand-arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.experience-header h3 {
+  margin: 0;
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  flex: 1;
+}
+
+.experience-header h4 {
+  margin: 0 0 0.75rem 0;
+  color: rgba(139, 92, 246, 0.9);
+  font-weight: 500;
+  font-size: 1.125rem;
+  letter-spacing: -0.01em;
+}
+
+.duration {
+  color: rgba(226, 232, 240, 0.6);
+  font-style: italic;
+  margin: 0 0 1rem 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.short-description {
+  color: rgba(226, 232, 240, 0.8);
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.experience-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  color: rgba(226, 232, 240, 0.75);
+  border-top: 1px solid transparent;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.experience-details.expanded {
+  max-height: 600px;
+  opacity: 1;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+  border-top-color: rgba(139, 92, 246, 0.2);
+}
+
+.experience-details ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-details li {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  color: rgba(203, 213, 225, 0.85);
+  position: relative;
+  font-weight: 400;
+  font-size: 0.95rem;
+  padding-left: 1.5rem;
+  padding-right: 1rem;
+}
+
+.experience-details li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgba(139, 92, 246, 0.7);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.experience-details li:last-child {
+  margin-bottom: 0;
+}
+
+/* Laptop optimizations */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .timeline {
+    max-width: 1300px;
+    padding: 4rem 3rem;
+  }
+  
+  .timeline-main {
+    gap: 2.5rem;
+  }
+  
+  .timeline-sidebar {
+    min-width: 280px;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1440px) {
+  .timeline {
+    max-width: 1500px;
+    padding: 5rem 4rem;
+  }
+  
+  .timeline-main {
+    gap: 3rem;
+  }
+  
+  .timeline-sidebar {
+    min-width: 320px;
+  }
+}
+
+/* Tablet - stack sidebar below */
+@media (max-width: 1023px) {
+  .timeline-main {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .timeline-sidebar {
+    position: static;
+    min-width: auto;
+    max-width: none;
+  }
+  
+  .tech-stack {
+    padding: 1.25rem;
+  }
+}
+
+/* Mobile - hide sidebar or simplify */
+@media (max-width: 768px) {
+  .timeline-sidebar {
+    display: none;
+  }
+  
+  .timeline-content {
+    flex: 1;
+  }
+}

@@ -1,0 +1,286 @@
+/* src/components/Projects.css */
+
+.intro-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Updated projects grid to match the optimized card grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+  max-width: 1400px;
+  margin: 0 auto 2rem auto;
+}
+
+/* Responsive breakpoints for laptop optimization */
+@media (min-width: 1200px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 768px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Glassmorphism Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(17, 24, 39, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 
+    0 25px 50px -12px rgba(139, 92, 246, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f9fafb;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #e5e7eb;
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close:hover {
+  background: rgba(139, 92, 246, 0.4);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.modal-header {
+  padding: 2rem 2rem 1rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #f3f4f6;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.modal-image:hover {
+  transform: scale(1.02);
+}
+
+.modal-description {
+  margin-bottom: 2rem;
+}
+
+.modal-description h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+.modal-description p {
+  line-height: 1.6;
+  color: #d1d5db;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.modal-technologies {
+  margin-bottom: 2rem;
+}
+
+.modal-technologies h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  color: #e5e7eb;
+  font-weight: 600;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(139, 92, 246, 0.25);
+  color: #c4b5fd;
+  transform: translateY(-2px);
+}
+
+.modal-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+.project-link {
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
+  min-width: 120px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.demo-link {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.9) 0%, rgba(22, 163, 74, 0.9) 100%);
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.demo-link:hover {
+  background: linear-gradient(135deg, rgba(22, 163, 74, 0.95) 0%, rgba(21, 128, 61, 0.95) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px -8px rgba(34, 197, 94, 0.4);
+}
+
+.source-link {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.9) 0%, rgba(31, 41, 55, 0.9) 100%);
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.source-link:hover {
+  background: linear-gradient(135deg, rgba(75, 85, 99, 0.95) 0%, rgba(55, 65, 81, 0.95) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px -8px rgba(75, 85, 99, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 1rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  
+  .modal-content {
+    margin: 1rem;
+    max-height: 95vh;
+    border-radius: 20px;
+  }
+  
+  .modal-header,
+  .modal-body {
+    padding: 1.5rem;
+  }
+  
+  .modal-links {
+    flex-direction: column;
+  }
+  
+  .project-link {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+  
+  .modal-header,
+  .modal-body {
+    padding: 1rem;
+  }
+  
+  .modal-image {
+    height: 200px;
+    border-radius: 12px;
+  }
+  
+  .modal-content {
+    border-radius: 16px;
+  }
+}

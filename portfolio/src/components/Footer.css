@@ -1,0 +1,13 @@
+/* src/components/Footer.css */
+.footer {
+  text-align: center;
+  padding: 2rem 5%;
+  background-color: var(--secondary-color);
+  margin-top: auto; /* Pushes footer to the bottom */
+  color: var(--text-dark);
+  font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
