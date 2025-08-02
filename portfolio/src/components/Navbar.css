@@ -11,20 +11,37 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+  gap: 1rem;
 }
 
+/* Logo + name wrapper */
 .nav-logo {
-  font-size: 2rem;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--accent-color);
   cursor: pointer;
+  text-decoration: none;
 }
 
+/* Logo image sizing */
+.logo-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Navigation links */
 .nav-menu {
   display: flex;
   list-style: none;
   gap: 2rem;
   align-items: center;
+  margin-left: auto;
 }
 
 .nav-menu li a {
@@ -33,6 +50,7 @@
   position: relative;
   padding-bottom: 5px;
   cursor: pointer;
+  transition: color 0.2s ease;
 }
 
 .nav-menu li a::after {
@@ -55,12 +73,17 @@
   color: var(--accent-color);
 }
 
+/* Hamburger (mobile) */
 .hamburger {
   display: none;
+  background: none;
+  border: none;
   cursor: pointer;
   color: var(--text-light);
+  font-size: 1.2rem;
 }
 
+/* Responsive mobile */
 @media screen and (max-width: 960px) {
   .hamburger {
     display: block;
