@@ -1,8 +1,8 @@
 /* src/components/ProjectCard.css */
 
 .card-container {
-  background: #ffffff;
-  border: 1px solid rgba(229, 231, 235, 0.8);
+  background: #200031ba !important;
+  border: 1px solid rgba(179, 13, 230, 0.8);
   border-radius: 24px;
   padding: 2rem;
   margin: 0;
@@ -23,7 +23,7 @@
   left: 0;
   right: 0;
   height: 5px;
-  background: linear-gradient(90deg, #8b5cf6, #a855f7, #c084fc);
+  background: linear-gradient(90deg, #210031, #260148, #31035f);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -36,8 +36,8 @@
 .card-container.clickable:hover {
   transform: translateY(-8px);
   box-shadow: 
-    0 20px 40px -12px rgba(0, 0, 0, 0.15),
-    0 0 0 1px rgba(255, 255, 255, 0.8);
+    0 20px 40px -12px rgba(248, 248, 248, 0.15),
+    0 0 0 1px rgba(228, 149, 246, 0.8);
   border-color: rgba(139, 92, 246, 0.3);
 }
 
@@ -60,7 +60,7 @@
 .card-title {
   margin: 0 0 1rem 0;
   font-size: 1.4rem;
-  color: #111827;
+  color: #1b1127;
   font-weight: 700;
   letter-spacing: -0.025em;
   line-height: 1.3;
