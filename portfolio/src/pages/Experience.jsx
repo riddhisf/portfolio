@@ -37,7 +37,7 @@ const Experience = () => {
     id: 3,
     title: "Visual Aids Captain",
     company: "Google Developer Groups on Campus, ABESEC",
-    duration: "October 2024 - Present",
+    duration: "October 2024 - September 2025",
     shortDescription: "Leading creative design and brand consistency for tech events",
     technologies: ["Canva"],
     responsibilities: [
