@@ -41,8 +41,8 @@ const AboutMe = () => {
             FULL-STACK & MOBILE APP DEVELOPER
           </p>
           <p className="aboutme">
-            Hello! I'm Riddhi Saraf, I connect intuitive frontend experiences 
-            built with React and Flutter to powerful and secure backend systems.
+            Hello! I'm Riddhi Saraf, a Java and Spring Boot developer passionate about building 
+            scalable backend systems, REST APIs, and modern full-stack applications using React and Flutter.
           </p>
         </div>
         
