@@ -18,7 +18,7 @@ const AboutMe = () => {
   const handleImageDownload = async () => {
     try {
       const response = await fetch(portfolioPDF);
-      if (!response.ok) throw new Error('Failed to fetch portfolio');
+      if (!response.ok) throw new Error('Failed to fetch resume');
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
