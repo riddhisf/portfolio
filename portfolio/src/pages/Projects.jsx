@@ -22,7 +22,7 @@ const Projects = () => {
       "MySQL",
       "JUnit"
     ],
-    image: Leaflink,
+    image: "https://placehold.co/600x400/0f172a/ffffff?text=Hotel+Management+API",
     sourceCode: "https://github.com/riddhisf/HotelManagement"
   },
 
@@ -40,8 +40,8 @@ const Projects = () => {
       "Microservices",
       "Jenkins"
     ],
-    image: GreenGrid,
-    sourceCode: "https://github.com/riddhisf"
+    image: "https://placehold.co/600x400/0f172a/ffffff?text=Cart+Microservices",
+    sourceCode: "https://github.com/riddhisf/CartMicroservice"
   },
 
   {
@@ -58,7 +58,7 @@ const Projects = () => {
       "JUnit",
       "Mockito"
     ],
-    image: GreenGrid,
+    image: "https://placehold.co/600x400/0f172a/ffffff?text=Trainee+API",
     sourceCode: "https://github.com/riddhisf/TraineeAPI"
   },
 
@@ -135,18 +135,18 @@ const Projects = () => {
               
               <div className="modal-body">
                 {selectedProject.image && (
-                  <img 
-                    src={selectedProject.image} 
+                  <img
+                    src={selectedProject.image}
                     alt={selectedProject.title}
                     className="modal-image"
                   />
                 )}
-                
+
                 <div className="modal-description">
                   <h3>About this project</h3>
                   <p>{selectedProject.fullDescription}</p>
                 </div>
-                
+
                 <div className="modal-technologies">
                   <h3>Technologies Used</h3>
                   <div className="tech-tags">
@@ -155,35 +155,42 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="modal-links">
-                  <a 
-                    href={selectedProject.liveDemo} 
-                    className="project-link demo-link"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    APK
-                  </a>
-                  {selectedProject?.demoVideo && (
+
+                  {selectedProject.liveDemo && (
+                    <a
+                      href={selectedProject.liveDemo}
+                      className="project-link demo-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      APK
+                    </a>
+                  )}
+
+                  {selectedProject.demoVideo && (
                     <a
                       href={selectedProject.demoVideo}
                       className="project-link demo-link"
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="Demo video"
                     >
                       Demo Video
                     </a>
                   )}
-                  <a 
-                    href={selectedProject.sourceCode} 
-                    className="project-link source-link"
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                  >
-                    Source Code
-                  </a>
+
+                  {selectedProject.sourceCode && (
+                    <a
+                      href={selectedProject.sourceCode}
+                      className="project-link source-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Source Code
+                    </a>
+                  )}
+
                 </div>
               </div>
             </div>

@@ -65,8 +65,8 @@ const AboutMe = () => {
             alt="Riddhi Saraf - Full-Stack Developer" 
             loading="lazy"
             style={{ cursor: 'pointer' }}
-            title="Click to download portfolio"
-            aria-label="Download portfolio"
+            title="Click to download resume"
+            aria-label="Download resume"
             onClick={handleImageDownload}
           />
         </div>
