@@ -9,7 +9,7 @@ const Experience = () => {
     id: 1,
     title: "Frontend Developer Intern",
     company: "Manoram Yatra",
-    duration: "June 2025 - Present",
+    duration: "June 2025 - July 2025",
     shortDescription: "Revamped user interface with modern React components",
     technologies: ["React", "JavaScript", "CSS3", "HTML5"],
     responsibilities: [

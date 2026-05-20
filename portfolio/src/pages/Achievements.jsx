@@ -10,7 +10,7 @@ const achievementsData = [
   {
     title: '2nd Place',
     subtitle: 'Student Pavilion, Gridcon 2025',
-    description: 'Secured 2nd place at Gridcon 2025 for student innovation, demonstrating technical creativity and impact in field of power systems.' // :contentReference[oaicite:7]{index=7}
+    description: 'Secured 2nd place at Gridcon 2025 for student innovation, demonstrating technical creativity and impact in field of power systems.' 
   },
   {
     title: 'Top 30',
@@ -18,14 +18,14 @@ const achievementsData = [
     description: 'Ranked in the Top 30 in the AKTU Navomesh AIDEA Challenge 2025, showcasing innovative problem-solving and design thinking.'
   },
   {
-    title: 'GATE 2025 Qualified',
-    subtitle: 'CSIT',
-    description: 'Qualified the Graduate Aptitude Test in Engineering (GATE) 2025 in the CSIT discipline, demonstrating strong engineering aptitude and fundamentals.' // inference based on user input; qualification itself from resume. :contentReference[oaicite:9]{index=9}
+    title: 'GATE 2025 & 2026 Qualified',
+    subtitle: 'CSIT & DSAI',
+    description: 'Qualified the Graduate Aptitude Test in Engineering (GATE) 2025 in the CSIT as well as DSAI discipline, demonstrating strong engineering aptitude and fundamentals.' 
   },
   {
     title: 'Director\'s Merit Certificate',
-    subtitle: 'CGPA: 8.69',
-    description: 'Achieved first rank in department/branch with a cumulative GPA of 8.69, reflecting consistent academic excellence during B.Tech in Electrical and Computer Engineering.' // :contentReference[oaicite:8]{index=8}
+    subtitle: 'CGPA: 8.77',
+    description: 'Achieved first rank in department/branch in second and third year with a cumulative GPA of 8.77, reflecting consistent academic excellence during B.Tech in Electrical and Computer Engineering.'
   },
   
 ];
